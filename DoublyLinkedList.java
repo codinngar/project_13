@@ -3,8 +3,8 @@ public class DoublyLinkedList {
     private Node tail;
 
     public DoublyLinkedList() {
-        head = null;
-        tail = null;
+        this.head = null;
+        this.tail = null;
     }
 
     public void insert(int data) {
