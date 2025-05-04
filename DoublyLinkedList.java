@@ -18,50 +18,51 @@ public class DoublyLinkedList {
 
         Node current = head;
         while (current != null) {
-            // if correct position is at the beginnin
+            // if correct position is at the beginning
             if (data <= current.data && current == head) {
                 current.previous = newNode;
                 newNode.next = current;
                 head = newNode;
                 return;
-                // if correct position is at the end
+            // if correct position is at the end
             } else if (data > current.data && current == tail) {
                 current.next = newNode;
                 newNode.previous = current;
                 tail = newNode;
                 return;
-                // if correct position is between two numbers
+            // if correct position is between two numbers
             } else if (data <= current.data) {
                 newNode.next = current;
                 newNode.previous = current.previous;
                 current.previous.next = newNode;
                 current.previous = newNode;
                 return;
+            // move pointer to the next element if it's not correct position
             } else {
                 current = current.next;
             }
         }
     }
 
-    public int getMin() {
+    public Integer getMin() {
         if (isEmpty()) {
-            return Integer.MIN_VALUE;
+            return null;
         }
 
         return head.data;
     }
 
-    public int getMax() {
+    public Integer getMax() {
         if (isEmpty()) {
-            return Integer.MIN_VALUE;
+            return null;
         }
 
         return tail.data;
     }
 
-    public int extractMin() {
+    public Integer extractMin() {
         if (isEmpty()) {
-            return Integer.MIN_VALUE;
+            return null;
         }
 
         int min = head.data;
@@ -76,9 +77,9 @@ public class DoublyLinkedList {
         return min;
     }
 
-    public int extractMax() {
+    public Integer extractMax() {
         if (isEmpty()) {
-            return Integer.MIN_VALUE;
+            return null;
         }
 
         int max = tail.data;
