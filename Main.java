@@ -30,7 +30,7 @@ public class Main {
         System.out.println("Get max: " + list.getMax().data);
         /* first test case */
 
-        System.out.println("=".repeat(20) + " Second test case " + "=".repeat(20));
+        System.out.println("=".repeat(20) + " Second test case " + "=".repeat(19));
 
         /* second test case */
         System.out.println("List before extraction:");
