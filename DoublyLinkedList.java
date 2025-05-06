@@ -61,7 +61,7 @@ class DoublyLinkedList {
         Link temp = first;
 
         if (first == null) // if list is empty
-            return first;
+            return null;
         else if (first.next == null) // if only one item
             last = null;
         else
@@ -76,13 +76,13 @@ class DoublyLinkedList {
         Link temp = last;
 
         if (first == null) // if list is empty
-            return first;
+            return null;
         if (first.next == null) // if only one item
             first = null;
         else
             last.previous.next = null; // remove first item
 
-        last = last.previous; // move reference to next item
+        last = last.previous; // move reference to previous item
         return temp;
     }
 
